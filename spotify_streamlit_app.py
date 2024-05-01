@@ -9,7 +9,7 @@ st.title('Music Track Analysis Dashboard')
 # Loading the data
 @st.cache  # This decorator caches the data to speed up load times
 def load_data():
-    df = pd.read_csv('artist_tracks.csv')
+    df = pd.read_csv('Spotify/artist_tracks.csv')
     return df
 
 df = load_data()
