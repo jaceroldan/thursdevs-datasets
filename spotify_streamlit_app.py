@@ -34,7 +34,7 @@ if st.sidebar.checkbox('Show Histogram for Danceability'):
 # Correlation Matrix
 if st.sidebar.checkbox('Show Correlation Matrix'):
     fig, ax = plt.subplots()
-    sns.heatmap(df.corr(), annot=True, fmt=".2f", cmap='coolwarm', ax=ax)
+    sns.heatmap(df.loc[:, df.columns != 'Artist'].corr(), annot=True, fmt=".2f", cmap='coolwarm', ax=ax)
     ax.set_title('Correlation Matrix')
     st.pyplot(fig)
 
